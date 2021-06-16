@@ -45,3 +45,9 @@ background: #A485D6;
   grid-template-columns: 80% 20%;
   grid-column-gap: 20px;
 }
+
+.tags {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}

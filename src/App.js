@@ -1,11 +1,10 @@
 import './App.css';
-import Example from './containers/Tags/index.js'
+import Tags from './containers/Tags/index.js'
 
 
 function App() {
 return (
 <div className="container">
-    <Example />
    <div className="event-container">
       <nav className="event-categories">
          <a className="navbar-item">All Events</a>
@@ -24,6 +23,7 @@ return (
          </div>
          <div className="tags">
             <p>TAGS</p>
+            <Tags />
          </div>
       </div>
    </div>
