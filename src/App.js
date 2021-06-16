@@ -1,9 +1,11 @@
 import './App.css';
-import './containers/Tags/index.js'
+import Example from './containers/Tags/index.js'
+
 
 function App() {
 return (
 <div className="container">
+    <Example />
    <div className="event-container">
       <nav className="event-categories">
          <a className="navbar-item">All Events</a>

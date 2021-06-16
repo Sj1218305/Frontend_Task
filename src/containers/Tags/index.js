@@ -1,5 +1,11 @@
 import {useEffect} from 'react';
 
-useEffect(() => {
-	console.log("useEffect ran");
-});
+const Example = () => {
+	return(
+		useEffect(() => {
+			console.log("useEffect ran");
+		});
+	);
+}
+
+export default Example;
