@@ -1,7 +1,7 @@
-import {useEffect} from 'react';
+import {useState, useEffect } from 'react';
 
 const Tags = () => {
-  let fetchTags = []; 
+  const [fetchTags, setFetchTags] = useState([]); 
 
   useEffect(() => {
     fetch('https://api.codingninjas.com/api/v3/event_tags')
@@ -9,18 +9,20 @@ const Tags = () => {
         return res.json();
       })
       .then(data => {
-        fetchTags = data.data.tags;
-        console.log(fetchTags)
+         setFetchTags(data.data.tags);
+        
       })
   },[])
-
-  return (
-   fetchTags.map((tag) =>(
-    <span className="tag">
-      {tag}
-    </span>
-    ))
-  );
+  
+   return ( 
+      <div>
+         { fetchTags.map((tag) =>( 
+      <span className="tag">
+         {tag}
+      </span>
+      ))}
+      </div>         
+   );
 }
  
 export default Tags;

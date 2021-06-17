@@ -21,7 +21,7 @@ return (
       <div className="event-body">
          <div className="event-cards">
          </div>
-         <div className="tags">
+         <div className="tags"> 
             <p>TAGS</p>
             <Tags />
          </div>
