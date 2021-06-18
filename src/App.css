@@ -3,7 +3,7 @@ background: #A485D6;
 }
 
 .container{
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,4 +54,16 @@ background: #A485D6;
 
 .tags > p{
   margin-bottom: 10px;
+}
+
+.all-events,
+.webinars,
+.coding-events,
+.bootcamp-events,
+.workshops {
+  display: none;
+}
+
+.t {
+  display: flex;
 }

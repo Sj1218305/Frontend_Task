@@ -13,7 +13,7 @@ const Tags = () => {
         
       })
   },[])
-  
+  // <button class="button is-primary is-outlined">Outlined</button>
    return ( 
       <div>
          { fetchTags.map((tag) =>( 
