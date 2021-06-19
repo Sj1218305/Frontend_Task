@@ -67,3 +67,13 @@ background: #A485D6;
 .t {
   display: flex;
 }
+
+.rows {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-column-gap: 20px;
+}
+
+.is-success {
+  background: linear-gradient(90deg,#fa7328,#ee9f15);
+}
