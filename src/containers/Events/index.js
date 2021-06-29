@@ -1,5 +1,6 @@
 import {useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
+import moment from 'moment'
 
 let category = "ALL_EVENTS"
 let subcategory = "Upcoming"
@@ -8,6 +9,7 @@ let offset = 1
  
 const Events = () => {
   const [fetchEvents, setFetchEvents] = useState([]); 
+
   let {category,subcategory}  = useParams();
   if(!subcategory){
     subcategory = "Upcoming"
@@ -27,7 +29,7 @@ const Events = () => {
       })
   },[category,subcategory])
 
-    console.log(fetchEvents)
+    // console.log(fetchEvents)
 
     const cols=fetchEvents && fetchEvents.map(el=>{
       return <div key={el.id}>
@@ -50,7 +52,7 @@ const Events = () => {
                     </div>
                     <div className="column is-size-7">
                       Entry Fee <br/>
-                    <strong>{el.fee}</strong>
+                    <strong>{el.fee ? el.fee : 'Free'}</strong>
                     </div>
                     <div className="column is-size-7">
                       Venue <br/>
@@ -63,9 +65,9 @@ const Events = () => {
                     <br/>
                   </div>             
                   <div className="tags">
-                    {el.card_tags.map(tag=>{
-                      <span className="tag is-light">{tag}</span>
-                    })}
+                    {/*{el.card_tags.map((tag)=>{*/}
+                      <span className="tag is-light">{el.card_tags}</span>
+                    {/*})}*/}
                   </div>
                   <hr/>
                   <nav class="level">

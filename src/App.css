@@ -44,6 +44,7 @@ background: #A485D6;
   display: grid;
   grid-template-columns: 80% 20%;
   grid-column-gap: 20px;
+  margin-left: 20px;
 }
 
 .tags {
@@ -72,8 +73,13 @@ background: #A485D6;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-column-gap: 20px;
+  grid-row-gap: 20px;
 }
 
 .is-success {
   background: linear-gradient(90deg,#fa7328,#ee9f15);
+}
+
+.event-cards {
+  margin-right: 20px;
 }
